@@ -6,6 +6,7 @@ public class App implements Runnable {
     public void run() {
 
         JFrame frame = new JFrame();
+        frame.setVisible(true);
         frame.setResizable(false);
         frame.setSize(640, 640);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
