@@ -23,19 +23,20 @@ public class App implements Runnable, ActionListener {
         frame.add(aPanel);
         frame.add(bPanel);
 
-        aPanel.setBackground(Color.red);
+        aPanel.setBackground(Color.black);
         aPanel.add(title);
         aPanel.setBounds(0, 0, 640, 160);
         aPanel.setLayout(new GridBagLayout());
 
-        bPanel.setBackground(Color.blue);
-        bPanel.setBounds(0, 160, 640, 480);
-
         title.setText("Tic Tac Toe");
-        title.setFont(new Font("Z003", Font.PLAIN, 75));
+        title.setForeground(Color.white);
+        title.setFont(new Font("Onyx", Font.PLAIN, 75));
         title.setHorizontalTextPosition(JLabel.CENTER);
         title.setVerticalTextPosition(JLabel.CENTER);
         title.setVerticalAlignment(JLabel.CENTER);
+
+        bPanel.setBackground(Color.black);
+        bPanel.setBounds(0, 160, 640, 480);
 
     }
 
