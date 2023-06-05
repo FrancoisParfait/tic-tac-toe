@@ -30,7 +30,7 @@ public class App implements Runnable, ActionListener {
 
         title.setText("Tic Tac Toe");
         title.setForeground(Color.white);
-        title.setFont(new Font("Onyx", Font.PLAIN, 75));
+        title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
         title.setHorizontalTextPosition(JLabel.CENTER);
         title.setVerticalTextPosition(JLabel.CENTER);
         title.setVerticalAlignment(JLabel.CENTER);
