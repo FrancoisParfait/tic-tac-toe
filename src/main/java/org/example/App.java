@@ -35,8 +35,19 @@ public class App implements Runnable, ActionListener {
         title.setVerticalTextPosition(JLabel.CENTER);
         title.setVerticalAlignment(JLabel.CENTER);
 
-        bPanel.setBackground(Color.black);
+        bPanel.setBackground(Color.blue);
         bPanel.setBounds(0, 160, 640, 480);
+        bPanel.setLayout(new GridLayout(3, 3));
+
+        for (int i = 0; i < 9; i++) {
+            btn[i] = new JButton();
+            btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
+            btn[i].setFocusable(false);
+            btn[i].setPreferredSize(new Dimension(50, 50));
+            btn[i].setBackground(Color.black);
+            btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
+            bPanel.add(btn[i]);
+        }
 
     }
 
