@@ -41,12 +41,11 @@ public class App implements Runnable, ActionListener {
 
         for (int i = 0; i < 9; i++) {
             btn[i] = new JButton();
+            bPanel.add(btn[i]);
             btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
             btn[i].setFocusable(false);
-            btn[i].setPreferredSize(new Dimension(50, 50));
             btn[i].setBackground(Color.black);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
-            bPanel.add(btn[i]);
         }
 
     }
