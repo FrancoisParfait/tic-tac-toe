@@ -54,6 +54,8 @@ public class App implements Runnable, ActionListener {
     }
 
     public static void main (String[] args) throws Exception {
+
         SwingUtilities.invokeLater(new App());
+
     }
 }
