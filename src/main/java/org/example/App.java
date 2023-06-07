@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class App implements Runnable, ActionListener {
     JFrame frame = new JFrame();
     JButton[] btn = new JButton[9];
-    JPanel aPanel = new JPanel();
+    JPanel aPanel = new JPanel(new GridBagLayout());
     JPanel bPanel = new JPanel(new GridLayout(3, 3));
     JLabel title = new JLabel();
 
@@ -26,7 +26,6 @@ public class App implements Runnable, ActionListener {
         aPanel.setBackground(Color.black);
         aPanel.add(title);
         aPanel.setBounds(0, 0, 640, 160);
-        aPanel.setLayout(new GridBagLayout());
 
         title.setText("Tic Tac Toe");
         title.setForeground(Color.white);
