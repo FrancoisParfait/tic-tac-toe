@@ -8,7 +8,7 @@ public class App implements Runnable, ActionListener {
     JFrame frame = new JFrame();
     JButton[] btn = new JButton[9];
     JPanel aPanel = new JPanel();
-    JPanel bPanel = new JPanel();
+    JPanel bPanel = new JPanel(new GridLayout(3, 3));
     JLabel title = new JLabel();
 
     @Override
@@ -37,7 +37,6 @@ public class App implements Runnable, ActionListener {
 
         bPanel.setBackground(Color.blue);
         bPanel.setBounds(0, 160, 640, 480);
-        bPanel.setLayout(new GridLayout(3, 3));
 
         for (int i = 0; i < 9; i++) {
             btn[i] = new JButton();
