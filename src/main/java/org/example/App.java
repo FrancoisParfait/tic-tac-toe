@@ -20,7 +20,7 @@ public class App implements Runnable, ActionListener {
         frame.setTitle("Tic Tac Toe");
         frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(aPanel);
+        frame.add(aPanel, BorderLayout.NORTH);
         frame.add(bPanel);
 
         aPanel.setBackground(Color.black);
@@ -32,8 +32,7 @@ public class App implements Runnable, ActionListener {
         title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
         title.setHorizontalAlignment(JLabel.CENTER);
 
-        bPanel.setBackground(Color.blue);
-        bPanel.setBounds(0, 160, 640, 480);
+        bPanel.setBackground(Color.black);
 
         for (int i = 0; i < 9; i++) {
             btn[i] = new JButton();
@@ -41,7 +40,6 @@ public class App implements Runnable, ActionListener {
             btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
             btn[i].setFocusable(false);
             btn[i].setBackground(Color.black);
-            btn[i].setOpaque(false);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
         }
     }
