@@ -42,6 +42,13 @@ public class App implements Runnable, ActionListener {
             btn[i].setBackground(Color.black);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
         }
+
+        startGame();
+    }
+
+    public void startGame() {
+
+
     }
 
     @Override
