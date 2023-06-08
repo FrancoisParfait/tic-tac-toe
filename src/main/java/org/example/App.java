@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class App implements Runnable, ActionListener {
     JFrame frame = new JFrame();
     JButton[] btn = new JButton[9];
-    JPanel aPanel = new JPanel(new GridBagLayout());
+    JPanel aPanel = new JPanel(new BorderLayout());
     JPanel bPanel = new JPanel(new GridLayout(3, 3));
     JLabel title = new JLabel();
 
@@ -30,9 +30,7 @@ public class App implements Runnable, ActionListener {
         title.setText("Tic Tac Toe");
         title.setForeground(Color.white);
         title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
-        title.setHorizontalTextPosition(JLabel.CENTER);
-        title.setVerticalTextPosition(JLabel.CENTER);
-        title.setVerticalAlignment(JLabel.CENTER);
+        title.setHorizontalAlignment(JLabel.CENTER);
 
         bPanel.setBackground(Color.blue);
         bPanel.setBounds(0, 160, 640, 480);
@@ -43,9 +41,9 @@ public class App implements Runnable, ActionListener {
             btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
             btn[i].setFocusable(false);
             btn[i].setBackground(Color.black);
+            btn[i].setOpaque(false);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
         }
-
     }
 
     @Override
