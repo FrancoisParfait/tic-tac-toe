@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class App implements Runnable, ActionListener {
     JFrame frame = new JFrame();
@@ -29,7 +30,7 @@ public class App implements Runnable, ActionListener {
 
         title.setText("Tic Tac Toe");
         title.setForeground(Color.white);
-        title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
+        title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 40));
         title.setHorizontalAlignment(JLabel.CENTER);
 
         bPanel.setBackground(Color.black);
@@ -48,7 +49,26 @@ public class App implements Runnable, ActionListener {
 
     public void startGame() {
 
+        boolean playerOneTurn = false;
+        boolean playerTwoTurn = false;
 
+        Random rand = new Random();
+        int upperBound = 20;
+        int intRandom = rand.nextInt(upperBound);
+
+        if (intRandom % 2 == 0) {
+            playerOneTurn = true;
+        } else {
+            playerTwoTurn = true;
+        }
+
+        if (playerOneTurn == true) {
+            title.setText("Player 1 Goes First!");
+            title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 40));
+        } else {
+            title.setText("Player 2 Goes First!");
+            title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 40));
+        }
     }
 
     @Override
