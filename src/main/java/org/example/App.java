@@ -64,10 +64,8 @@ public class App implements Runnable, ActionListener {
 
         if (playerOneTurn == true) {
             title.setText("Player 1 Goes First!");
-            title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 40));
         } else {
             title.setText("Player 2 Goes First!");
-            title.setFont(new Font("TlwgTypewriter", Font.PLAIN, 40));
         }
     }
 
