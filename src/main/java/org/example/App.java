@@ -72,6 +72,11 @@ public class App implements Runnable, ActionListener {
         }
     }
 
+    public boolean checkWin() {
+
+        return true;
+    }
+
 
 
     @Override
