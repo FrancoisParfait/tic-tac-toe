@@ -52,6 +52,9 @@ public class App implements Runnable, ActionListener {
         boolean playerOneTurn = false;
         boolean playerTwoTurn = false;
 
+        Object playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
+        Object playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
+
         Random rand = new Random();
         int upperBound = 20;
         int intRandom = rand.nextInt(upperBound);
@@ -63,11 +66,13 @@ public class App implements Runnable, ActionListener {
         }
 
         if (playerOneTurn == true) {
-            title.setText("Player 1 Goes First!");
+            title.setText(playerOneName + " Goes First!");
         } else {
-            title.setText("Player 2 Goes First!");
+            title.setText(playerTwoName + " Goes First!");
         }
     }
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
