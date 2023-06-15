@@ -81,8 +81,6 @@ public class App implements Runnable, ActionListener {
         return true;
     }
 
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
         for (int i = 0; i < 9; i++) {
