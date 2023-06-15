@@ -92,7 +92,7 @@ public class App implements Runnable, ActionListener {
                         btn[i].setText("X");
                         playerOneTurn = false;
                         playerTwoTurn = true;
-                        title.setText();
+                        title.setText(playerTwoName + "'s turn");
                     }
                 }
 
@@ -101,6 +101,7 @@ public class App implements Runnable, ActionListener {
                         btn[i].setText("O");
                         playerTwoTurn = false;
                         playerOneTurn = true;
+                        title.setText(playerOneName + "'s turn");
                     }
                 }
             }
