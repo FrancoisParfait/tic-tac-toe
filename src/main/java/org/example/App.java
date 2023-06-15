@@ -11,6 +11,9 @@ public class App implements Runnable, ActionListener {
     JPanel aPanel = new JPanel(new BorderLayout());
     JPanel bPanel = new JPanel(new GridLayout(3, 3));
     JLabel title = new JLabel();
+    boolean playerOneTurn;
+    boolean playerTwoTurn;
+
 
     @Override
     public void run() {
@@ -48,9 +51,6 @@ public class App implements Runnable, ActionListener {
     }
 
     public void startGame() {
-
-        boolean playerOneTurn = false;
-        boolean playerTwoTurn = false;
 
         Object playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
         Object playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
