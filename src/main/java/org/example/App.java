@@ -13,6 +13,8 @@ public class App implements Runnable, ActionListener {
     JLabel title = new JLabel();
     boolean playerOneTurn;
     boolean playerTwoTurn;
+    Object playerOneName;
+    Object playerTwoName;
 
 
     @Override
@@ -41,8 +43,9 @@ public class App implements Runnable, ActionListener {
         for (int i = 0; i < 9; i++) {
             btn[i] = new JButton();
             bPanel.add(btn[i]);
-            btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 75));
+            btn[i].setFont(new Font("TlwgTypewriter", Font.PLAIN, 100));
             btn[i].setFocusable(false);
+            btn[i].setForeground(Color.white);
             btn[i].setBackground(Color.black);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
             btn[i].addActionListener(this);
@@ -53,8 +56,8 @@ public class App implements Runnable, ActionListener {
 
     public void startGame() {
 
-        Object playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
-        Object playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
+        playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
+        playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
 
         Random rand = new Random();
         int upperBound = 20;
@@ -89,6 +92,7 @@ public class App implements Runnable, ActionListener {
                         btn[i].setText("X");
                         playerOneTurn = false;
                         playerTwoTurn = true;
+                        title.setText();
                     }
                 }
 
