@@ -15,6 +15,8 @@ public class App implements Runnable, ActionListener {
     boolean playerTwoTurn;
     Object playerOneName;
     Object playerTwoName;
+    boolean playerOneWin;
+    boolean playerTwoWin;
 
 
     @Override
@@ -85,8 +87,21 @@ public class App implements Runnable, ActionListener {
     }
 
     public boolean checkWin() {
+        if (btn[0].getText().equals("X") && btn[1].getText().equals("X") && btn[2].getText().equals("X")) {
+            btn[0].setBackground(Color.white);
+            btn[0].setForeground(Color.black);
+            btn[1].setBackground(Color.white);
+            btn[1].setForeground(Color.black);
+            btn[2].setBackground(Color.white);
+            btn[2].setForeground(Color.black);
+            playerOneWin = true;
+            return true;
+        }
+        return false;
+    }
 
-        return true;
+    public void resetGame() {
+        SwingUtilities.invokeLater(new App());
     }
 
     @Override
@@ -109,6 +124,12 @@ public class App implements Runnable, ActionListener {
                         playerTwoTurn = false;
                         playerOneTurn = true;
                         title.setText(playerOneName + "'s turn");
+                    }
+                }
+
+                if (checkWin()) {
+                    if (playerOneWin) {
+                        title.setText(playerOneName + " wins!");
                     }
                 }
             }
