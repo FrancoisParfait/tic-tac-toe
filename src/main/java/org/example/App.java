@@ -59,6 +59,14 @@ public class App implements Runnable, ActionListener {
         playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
         playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
 
+        if (playerOneName == null) {
+            playerOneName = "Player 1";
+        }
+
+        if (playerTwoName == null) {
+            playerTwoName = "Player 2";
+        }
+
         Random rand = new Random();
         int upperBound = 20;
         int intRandom = rand.nextInt(upperBound);
@@ -83,6 +91,7 @@ public class App implements Runnable, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         for (int i = 0; i < 9; i++) {
             if (e.getSource() == btn[i]) {
                 if (playerOneTurn) {
