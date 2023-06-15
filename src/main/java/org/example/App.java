@@ -45,6 +45,7 @@ public class App implements Runnable, ActionListener {
             btn[i].setFocusable(false);
             btn[i].setBackground(Color.black);
             btn[i].setBorder(BorderFactory.createLineBorder(Color.white));
+            btn[i].addActionListener(this);
         }
 
         startGame();
@@ -65,7 +66,7 @@ public class App implements Runnable, ActionListener {
             playerTwoTurn = true;
         }
 
-        if (playerOneTurn == true) {
+        if (playerOneTurn) {
             title.setText(playerOneName + " Goes First!");
         } else {
             title.setText(playerTwoName + " Goes First!");
@@ -81,7 +82,25 @@ public class App implements Runnable, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        for (int i = 0; i < 9; i++) {
+            if (e.getSource() == btn[i]) {
+                if (playerOneTurn) {
+                    if (btn[i].getText().equals("")) {
+                        btn[i].setText("X");
+                        playerOneTurn = false;
+                        playerTwoTurn = true;
+                    }
+                }
 
+                if (playerTwoTurn) {
+                    if (btn[i].getText().equals("")) {
+                        btn[i].setText("O");
+                        playerTwoTurn = false;
+                        playerOneTurn = true;
+                    }
+                }
+            }
+        }
     }
 
     public static void main (String[] args) throws Exception {
