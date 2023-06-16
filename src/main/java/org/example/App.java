@@ -101,7 +101,14 @@ public class App implements Runnable, ActionListener {
     }
 
     public void resetGame() {
-        SwingUtilities.invokeLater(new App());
+        int input = JOptionPane.showConfirmDialog(null, "Start new game?", "", JOptionPane.YES_NO_OPTION);
+        //0 = yes, 1 = no
+
+        if (input == 0) {
+           SwingUtilities.invokeLater(new App());
+        } else if (input == 1) {
+            frame.dispose();
+        }
     }
 
     @Override
