@@ -88,16 +88,18 @@ public class App implements Runnable, ActionListener {
 
     public boolean checkWin() {
         if (btn[0].getText().equals("X") && btn[1].getText().equals("X") && btn[2].getText().equals("X")) {
-            btn[0].setBackground(Color.white);
-            btn[0].setForeground(Color.black);
-            btn[1].setBackground(Color.white);
-            btn[1].setForeground(Color.black);
-            btn[2].setBackground(Color.white);
-            btn[2].setForeground(Color.black);
+            for (int i = 0; i < 3; i++) {
+                colorChange(i);
+            }
             playerOneWin = true;
             return true;
         }
         return false;
+    }
+
+    public void colorChange(int num1) {
+        btn[num1].setForeground(Color.BLACK);
+        btn[num1].setBackground(Color.WHITE);
     }
 
     public void resetGame() {
