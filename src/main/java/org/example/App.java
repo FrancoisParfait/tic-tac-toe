@@ -105,7 +105,8 @@ public class App implements Runnable, ActionListener {
         //0 = yes, 1 = no
 
         if (input == 0) {
-           SwingUtilities.invokeLater(new App());
+            frame.dispose();
+            SwingUtilities.invokeLater(new App());
         } else if (input == 1) {
             frame.dispose();
         }
@@ -137,6 +138,7 @@ public class App implements Runnable, ActionListener {
                 if (checkWin()) {
                     if (playerOneWin) {
                         title.setText(playerOneName + " wins!");
+                        resetGame();
                     }
                 }
             }
