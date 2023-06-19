@@ -88,9 +88,9 @@ public class App implements Runnable, ActionListener {
 
     public boolean checkWin() {
         if (btn[0].getText().equals("X") && btn[1].getText().equals("X") && btn[2].getText().equals("X")) {
-            for (int i = 0; i < 3; i++) {
-                colorChange(i);
-            }
+            colorChange(0);
+            colorChange(1);
+            colorChange(2);
             playerOneWin = true;
             return true;
         }
