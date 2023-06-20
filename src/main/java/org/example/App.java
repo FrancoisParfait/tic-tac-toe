@@ -255,7 +255,7 @@ public class App implements Runnable, ActionListener {
                         title.setText(playerOneName + " wins!");
                         resetGame();
                     } else {
-                        title.setText(playerTwoName + "wins!");
+                        title.setText(playerTwoName + " wins!");
                         resetGame();
                     }
                 }
