@@ -13,7 +13,7 @@ public class App implements Runnable, ActionListener {
     JLabel title = new JLabel();
     boolean playerOneTurn;
     boolean playerTwoTurn;
-    Object playerOneName;
+    Object playerOneName = "Player 1";
     Object playerTwoName;
     boolean playerOneWin;
     boolean playerTwoWin;
@@ -61,11 +61,11 @@ public class App implements Runnable, ActionListener {
         playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
         playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
 
-        if (playerOneName.equals("")) {
+        if (playerOneName == null || playerOneName.equals("")) {
             playerOneName = "Player 1";
         }
 
-        if (playerTwoName.equals("")) {
+        if (playerTwoName == null || playerTwoName.equals("")) {
             playerTwoName = "Player 2";
         }
 
@@ -144,15 +144,15 @@ public class App implements Runnable, ActionListener {
         int noDraw = 0;
 
         for (int i = 0; i < 9; i++) {
-            if (btn[i].equals("")) {
+            if (btn[i].getText().equals("")) {
                 noDraw++;
             }
         }
 
-        if (noDraw > 0) {
-            return false;
+        if (noDraw == 0) {
+            return true;
         }
-        return true;
+        return false;
     }
 
     public void colorChange(int num1) {
@@ -168,7 +168,7 @@ public class App implements Runnable, ActionListener {
 
     public void resetGame() {
         int input = JOptionPane.showConfirmDialog(null, "Start new game?", "", JOptionPane.YES_NO_OPTION);
-        //0 = yes, 1 = no
+        // 0 = yes, 1 = no
 
         if (input == 0) {
             frame.dispose();
