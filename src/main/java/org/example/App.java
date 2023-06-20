@@ -135,6 +135,54 @@ public class App implements Runnable, ActionListener {
             colorChange(8);
             playerOneWin = true;
             return true;
+        } else if (btn[0].getText().equals("O") && btn[4].getText().equals("O") && btn[8].getText().equals("O")) {
+            colorChange(0);
+            colorChange(4);
+            colorChange(8);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[0].getText().equals("O") && btn[3].getText().equals("O") && btn[6].getText().equals("O")) {
+            colorChange(0);
+            colorChange(3);
+            colorChange(6);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[1].getText().equals("O") && btn[4].getText().equals("O") && btn[7].getText().equals("O")) {
+            colorChange(1);
+            colorChange(4);
+            colorChange(7);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[2].getText().equals("O") && btn[5].getText().equals("O") && btn[8].getText().equals("O")) {
+            colorChange(2);
+            colorChange(5);
+            colorChange(8);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[6].getText().equals("O") && btn[4].getText().equals("O") && btn[2].getText().equals("O")) {
+            colorChange(6);
+            colorChange(4);
+            colorChange(2);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[3].getText().equals("O") && btn[4].getText().equals("X") && btn[5].getText().equals("O")) {
+            colorChange(3);
+            colorChange(4);
+            colorChange(5);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[6].getText().equals("O") && btn[7].getText().equals("O") && btn[8].getText().equals("O")) {
+            colorChange(6);
+            colorChange(7);
+            colorChange(8);
+            playerTwoWin = true;
+            return true;
+        } else if (btn[0].getText().equals("O") && btn[1].getText().equals("O") && btn[2].getText().equals("O")) {
+            colorChange(0);
+            colorChange(1);
+            colorChange(2);
+            playerTwoWin = true;
+            return true;
         }
         return false;
     }
@@ -205,6 +253,9 @@ public class App implements Runnable, ActionListener {
                     disableButtons();
                     if (playerOneWin) {
                         title.setText(playerOneName + " wins!");
+                        resetGame();
+                    } else {
+                        title.setText(playerTwoName + "wins!");
                         resetGame();
                     }
                 }
