@@ -61,11 +61,11 @@ public class App implements Runnable, ActionListener {
         playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
         playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
 
-        if (playerOneName == null) {
+        if (playerOneName.equals("")) {
             playerOneName = "Player 1";
         }
 
-        if (playerTwoName == null) {
+        if (playerTwoName.equals("")) {
             playerTwoName = "Player 2";
         }
 
