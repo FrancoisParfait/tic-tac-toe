@@ -208,12 +208,6 @@ public class App implements Runnable, ActionListener {
         btn[num1].setBackground(Color.WHITE);
     }
 
-    public void disableButtons() {
-        for (int i = 0; i < 9; i++) {
-            btn[i].setEnabled(false);
-        }
-    }
-
     public void resetGame() {
         int input = JOptionPane.showConfirmDialog(null, "Start new game?", "", JOptionPane.YES_NO_OPTION);
         // 0 = yes, 1 = no
@@ -250,7 +244,6 @@ public class App implements Runnable, ActionListener {
                 }
 
                 if (checkWin()) {
-                    disableButtons();
                     if (playerOneWin) {
                         title.setText(playerOneName + " wins!");
                         resetGame();
