@@ -87,6 +87,7 @@ public class App implements Runnable, ActionListener {
     }
 
     public boolean checkWin() {
+
         if (btn[0].getText().equals("X") && btn[1].getText().equals("X") && btn[2].getText().equals("X")) {
             colorChange(0);
             colorChange(1);
@@ -204,11 +205,13 @@ public class App implements Runnable, ActionListener {
     }
 
     public void colorChange(int num1) {
+
         btn[num1].setForeground(Color.BLACK);
         btn[num1].setBackground(Color.WHITE);
     }
 
     public void resetGame() {
+
         int input = JOptionPane.showConfirmDialog(null, "Start new game?", "", JOptionPane.YES_NO_OPTION);
         // 0 = yes, 1 = no
 
