@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class App implements Runnable, ActionListener {
+
     JFrame frame = new JFrame();
     JButton[] btn = new JButton[9];
     JPanel aPanel = new JPanel(new BorderLayout());
@@ -13,11 +14,10 @@ public class App implements Runnable, ActionListener {
     JLabel title = new JLabel();
     boolean playerOneTurn;
     boolean playerTwoTurn;
-    Object playerOneName = "Player 1";
+    Object playerOneName;
     Object playerTwoName;
     boolean playerOneWin;
     boolean playerTwoWin;
-
 
     @Override
     public void run() {
