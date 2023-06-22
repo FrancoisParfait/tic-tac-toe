@@ -166,7 +166,7 @@ public class App implements Runnable, ActionListener {
             colorChange(2);
             playerTwoWin = true;
             return true;
-        } else if (btn[3].getText().equals("O") && btn[4].getText().equals("X") && btn[5].getText().equals("O")) {
+        } else if (btn[3].getText().equals("O") && btn[4].getText().equals("O") && btn[5].getText().equals("O")) {
             colorChange(3);
             colorChange(4);
             colorChange(5);
