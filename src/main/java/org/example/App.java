@@ -59,7 +59,7 @@ public class App implements Runnable, ActionListener {
     public void startGame() {
 
         playerOneName = JOptionPane.showInputDialog(frame, "Player 1 Name:");
-        playerTwoName = JOptionPane.showInputDialog(frame, "PLayer 2 Name:");
+        playerTwoName = JOptionPane.showInputDialog(frame, "Player 2 Name:");
 
         if (playerOneName == null || playerOneName.equals("")) {
             playerOneName = "Player 1";
@@ -250,7 +250,7 @@ public class App implements Runnable, ActionListener {
                     if (playerOneWin) {
                         title.setText(playerOneName + " wins!");
                         resetGame();
-                    } else {
+                    } else if (playerTwoWin) {
                         title.setText(playerTwoName + " wins!");
                         resetGame();
                     }
